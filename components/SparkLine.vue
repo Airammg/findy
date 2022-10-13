@@ -83,6 +83,7 @@ export default {
 
         if (this.parameter === 'wind') { positions.push(this.hours[i].wind.speed * 3.6) }
         if (this.parameter === 'gust') { positions.push(this.hours[i].wind.gust * 3.6) }
+        if (this.parameter === 'rain') { positions.push(this.hours[i].pop) }
       }
       return positions
     },
@@ -101,8 +102,7 @@ export default {
       if (this.parameter === 'wind') { return this.gradients.wind }
       if (this.parameter === 'gust') { return this.gradients.gust }
       if (this.parameter === 'feel') { return this.gradients.feel }
-      if (this.parameter === 'chance_of_rain') { return this.gradients.rain }
-      if (this.parameter === 'chance_of_snow') { return this.gradients.snow }
+      if (this.parameter === 'rain') { return this.gradients.rain }
 
       return this.gradients.default
     },

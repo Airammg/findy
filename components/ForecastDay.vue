@@ -41,6 +41,10 @@
               <IconGust />&nbsp;
               {{ averageGust }} Km/h
             </div>
+            <div class="icon-data d-flex">
+              <IconRain />&nbsp;
+              {{ averageRainProbability }} %
+            </div>
           </v-card-text>
         </v-col>
         <v-col class="" cols="12" xs="12" sm="12" lg="8">
@@ -60,13 +64,15 @@ import ForecastHour from '@/components/ForecastHour.vue'
 import IconWind from '@/components/IconWind.vue'
 import IconSun from '@/components/IconSun.vue'
 import IconTherm from '@/components/IconTherm.vue'
+import IconRain from '@/components/IconRain.vue'
 
 export default {
   components: {
     ForecastHour,
     IconSun,
     IconWind,
-    IconTherm
+    IconTherm,
+    IconRain
 
   },
   props: {
@@ -112,6 +118,13 @@ export default {
         allGust.push(this.forecast[i].wind.gust * 3.6)
       }
       return Math.round(allGust.reduce((a, b) => (a + b)) / allGust.length)
+    },
+    averageRainProbability () {
+      const allRain = []
+      for (let i = 0; i < this.forecast.length; i++) {
+        allRain.push(this.forecast[i].pop)
+      }
+      return Math.round((allRain.reduce((a, b) => (a + b)) / allRain.length) * 100)
     }
   }
 }

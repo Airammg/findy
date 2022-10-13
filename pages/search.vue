@@ -38,17 +38,13 @@
     </v-col>
 
     <!-- to be deleted -->
-    <!-- <v-col v-if="forecastResults"> -->
-    <!-- <div>description:{{ realTimeResults.weather[0].description }}</div>
-      <div>icon: {{ realTimeResults.weather[0].icon }}</div>
-      <div>temp:{{ realTimeResults.main.temp }}</div>
-      <div>feels like:{{ realTimeResults.main.feels_like }}</div>
-      <div>pressure: {{ realTimeResults.main.pressure }}</div>
-      <div>humidity: {{ realTimeResults.main.humidity }}</div>
 
-      <div>wind speed: {{ realTimeResults.wind.speed }}</div> -->
-
-    <!-- <pre>{{ forecastResults.city }}</pre>
+    <!-- <v-col v-if="forecastResults">
+      <pre>
+      {{ realTimeResults }}</pre> <br>
+      <pre>Rain probability {{ forecastResults.list[10].pop }}
+      </pre>
+    </pre>
     </v-col> -->
 
     <v-col cols="12" xs="12" sm="4" md="3">

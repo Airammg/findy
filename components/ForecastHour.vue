@@ -61,8 +61,8 @@
       :parameter="rain"
       :titlename="'Rain probability'"
       :unit="'%'"
-    />
-    <SparkLine
+    /> -->
+    <!-- <SparkLine
       v-if="snowSwitch"
 
       :hours="hour"
@@ -101,7 +101,7 @@ export default {
       feelSwitch: true,
       windSwitch: true,
       gustSwitch: true,
-      rainSwitch: false,
+      rainSwitch: true,
       snowSwitch: false
 
     }
