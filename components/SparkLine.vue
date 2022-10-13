@@ -83,7 +83,7 @@ export default {
 
         if (this.parameter === 'wind') { positions.push(this.hours[i].wind.speed * 3.6) }
         if (this.parameter === 'gust') { positions.push(this.hours[i].wind.gust * 3.6) }
-        if (this.parameter === 'rain') { positions.push(this.hours[i].pop) }
+        if (this.parameter === 'rain') { positions.push(this.hours[i].pop * 100) }
       }
       return positions
     },

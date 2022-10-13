@@ -19,7 +19,7 @@
       <v-switch v-model="windSwitch" label="Wind" color="#af429a" class=" d-inline-block switcher" />
       <v-switch v-model="gustSwitch" label="Gust" color="#af429a" class=" d-inline-block switcher" />
 
-      <!-- <v-switch v-model="rainSwitch" label="Rain" color="#af429a" class=" d-inline-block switcher" /> -->
+      <v-switch v-model="rainSwitch" label="Rain" color="#af429a" class=" d-inline-block switcher" />
 
       <!-- <v-switch v-model="rainSwitch" label="Rain" color="#af429a" class=" d-inline-block switcher" /> -->
       <!-- <v-switch v-model="snowSwitch" label="Snow" color="#af429a" class=" d-inline-block switcher" /> -->
@@ -54,22 +54,14 @@
       :titlename="'Wind Gust'"
     />
 
-    <!-- <SparkLine
+    <SparkLine
       v-if="rainSwitch"
 
       :hours="hour"
-      :parameter="rain"
+      :parameter="'rain'"
+      :unit="'%'"
       :titlename="'Rain probability'"
-      :unit="'%'"
-    /> -->
-    <!-- <SparkLine
-      v-if="snowSwitch"
-
-      :hours="hour"
-      :parameter="snow"
-      :titlename="'Snow probability'"
-      :unit="'%'"
-    /> -->
+    />
   </div>
 </template>
 
